@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SpaceBackground from "@/Components/Background";
 import FloatingBackToTop from "@/Components/BackToTop";
+import { url } from "inspector";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://muhammadajayi.vercel.app"),
   title: {
     default: "Muhammad Ajayi — Frontend Developer",
     template: "%s | Muhammad Ajayi",
