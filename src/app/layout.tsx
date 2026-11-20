@@ -4,7 +4,6 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SpaceBackground from "@/Components/Background";
 import FloatingBackToTop from "@/Components/BackToTop";
-import { url } from "inspector";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +65,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased overflow-x-hidden bg-cover bg-center bg-no-repeat scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
+        <Analytics />
         <SpaceBackground />
         <FloatingBackToTop />
         {children}
